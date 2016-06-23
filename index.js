@@ -10,7 +10,7 @@ $("#submit-btn").click(function(){
   }
   else{
     for(var i = 0; i < ipstring.length; i++) {
-      if(ipstring[i]>255 || ipstring[i]<0 || isNaN(ipstring[i])){
+      if(ipstring[i]>255 || ipstring[i]<0){
         $('#int-value').html('invalid address');
         break;
       }
@@ -24,3 +24,12 @@ $("#submit-btn").click(function(){
     }
   }
 });
+
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 46 || charCode > 57 || charCode==47)) {
+        return false;
+    }
+    return true;
+}
