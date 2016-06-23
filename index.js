@@ -1,12 +1,15 @@
 console.log("Hello World!");
 
 $("#submit-btn").click(function(){
-  var ipInt="";
+  var ipInt;
   var intAddress=0;
   var ipstring = $('#ip-input').val().split('.');
   console.log(ipstring);
   if(ipstring.length>4){
     $('#int-value').html('invald format');
+  }
+  else if (ipstring<4) {
+    $('#int-value').html('invalid format');
   }
   else{
     for(var i = 0; i < ipstring.length; i++) {
