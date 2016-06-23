@@ -1,1 +1,0 @@
-# chartspan_challenge
